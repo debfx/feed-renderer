@@ -62,6 +62,7 @@ func main() {
 
 	router := chi.NewRouter()
 	router.Use(middleware.Logger)
+	router.Use(middleware.Heartbeat("/health"))
 	router.Use(middleware.SetHeader("content-security-policy", "default-src 'self'; img-src *; form-action 'self';"))
 	router.Use(middleware.SetHeader("x-frame-options", "SAMEORIGIN"))
 	router.Use(middleware.Recoverer)
