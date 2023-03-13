@@ -13,8 +13,8 @@ RUN go build -o feed-renderer
 
 FROM scratch
 
+USER 10000
 EXPOSE 8000
-
 WORKDIR /app
 
 COPY --from=builder /app/feed-renderer /app/feed-renderer
