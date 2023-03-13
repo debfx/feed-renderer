@@ -11,14 +11,13 @@ COPY *.go ./
 RUN go build -o feed-renderer
 
 
-FROM scratch
+FROM gcr.io/distroless/static-debian11
 
 USER 10000
 EXPOSE 8000
 WORKDIR /app
 
 COPY --from=builder /app/feed-renderer /app/feed-renderer
-COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY static /app/static
 
 CMD ["/app/feed-renderer"]
