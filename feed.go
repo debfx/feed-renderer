@@ -20,7 +20,6 @@ const TEMPLATE_HEADER = `
 <html>
 <head>
   <title>{{.title}}</title>
-  <link rel="icon" href="data:,">
   <link href="/static/main.css" rel="stylesheet">
 </head>
 <body>
