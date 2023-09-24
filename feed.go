@@ -45,9 +45,11 @@ const TEMPLATE_FEED = `
   <div class="content">
     {{if .Content}} {{.Content|sanitizeHTML|safeHTML}} {{else}} {{.Description|sanitizeHTML|safeHTML}} {{end}}
   </div>
+  {{if .PublishedParsed}}
   <small>
     Published: {{.PublishedParsed.Format "2006-01-02 15:04:05 -0700"}}
   </small>
+  {{end}}
 </div>
 {{end}}
 
