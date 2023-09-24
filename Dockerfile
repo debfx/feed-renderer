@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.20 AS builder
+FROM docker.io/golang:1.21 AS builder
 
 ENV CGO_ENABLED=0
 
@@ -11,7 +11,7 @@ COPY *.go ./
 RUN go build -o feed-renderer
 
 
-FROM gcr.io/distroless/static-debian11
+FROM gcr.io/distroless/static-debian12
 
 USER 10000
 EXPOSE 8000
