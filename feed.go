@@ -52,9 +52,6 @@ const TEMPLATE_FEED = `
   {{end}}
 </div>
 {{end}}
-
-</body>
-</html>
 `
 
 const TEMPLATE_ERROR = `
@@ -64,9 +61,6 @@ const TEMPLATE_ERROR = `
   {{.error}}<br/>
   <a href="{{.url}}">{{.url}}</a>
 </div>
-
-</body>
-</html>
 `
 
 type FeedRenderer struct {
