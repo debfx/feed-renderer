@@ -11,9 +11,8 @@ COPY *.go ./
 RUN go build -o feed-renderer
 
 
-FROM gcr.io/distroless/static-debian12
+FROM gcr.io/distroless/static-debian12:nonroot
 
-USER 10000
 EXPOSE 8000
 WORKDIR /app
 
