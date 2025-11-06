@@ -1,4 +1,4 @@
-FROM docker.io/golang:1.23 AS builder
+FROM docker.io/golang:1.25.4 AS builder
 
 ENV CGO_ENABLED=0
 
