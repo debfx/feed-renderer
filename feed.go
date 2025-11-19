@@ -21,6 +21,7 @@ const TEMPLATE_HEADER = `
 <head>
   <title>{{.title}}</title>
   <link href="/static/main.css" rel="stylesheet">
+  <meta name="color-scheme" content="light dark">
 </head>
 <body>
 <h1>RSS/Atom feed renderer</h1>
